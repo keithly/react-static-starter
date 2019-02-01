@@ -1,13 +1,12 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
-//
-import Routes from 'react-static-routes'
+import { Root, Routes } from 'react-static'
+import { Link } from '@reach/router'
 
 import './app.css'
 
-export default () => (
-  <Router>
-    <div>
+function App() {
+  return (
+    <Root>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
@@ -16,6 +15,8 @@ export default () => (
       <div className="content">
         <Routes />
       </div>
-    </div>
-  </Router>
-)
+    </Root>
+  )
+}
+
+export default App
